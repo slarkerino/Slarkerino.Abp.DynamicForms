@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Slarkerino.Abp.DynamicForms</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Slarkerino.Abp.DynamicForms.Application\Slarkerino.Abp.DynamicForms.Application.csproj" />
+    <ProjectReference Include="..\Slarkerino.Abp.DynamicForms.Domain.Tests\Slarkerino.Abp.DynamicForms.Domain.Tests.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
+  </ItemGroup>
+
+</Project>

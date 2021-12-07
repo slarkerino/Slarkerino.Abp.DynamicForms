@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Slarkerino.Abp.DynamicForms</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.MongoDB" Version="4.4.4" />
+    <ProjectReference Include="..\Slarkerino.Abp.DynamicForms.Domain\Slarkerino.Abp.DynamicForms.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

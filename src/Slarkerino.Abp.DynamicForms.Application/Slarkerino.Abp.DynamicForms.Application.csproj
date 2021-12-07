@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Slarkerino.Abp.DynamicForms</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="4.4.4" />
+    <PackageReference Include="Volo.Abp.Ddd.Application" Version="4.4.4" />
+    <ProjectReference Include="..\Slarkerino.Abp.DynamicForms.Application.Contracts\Slarkerino.Abp.DynamicForms.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Slarkerino.Abp.DynamicForms.Domain\Slarkerino.Abp.DynamicForms.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

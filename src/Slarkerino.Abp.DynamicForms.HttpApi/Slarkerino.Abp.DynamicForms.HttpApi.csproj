@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Slarkerino.Abp.DynamicForms</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.4.4" />
+    <ProjectReference Include="..\Slarkerino.Abp.DynamicForms.Application.Contracts\Slarkerino.Abp.DynamicForms.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
