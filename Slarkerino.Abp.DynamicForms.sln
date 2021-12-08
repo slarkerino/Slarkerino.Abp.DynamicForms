@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29001.49
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slarkerino.Abp.DynamicForms.Domain.Shared", "src\Slarkerino.Abp.DynamicForms.Domain.Shared\Slarkerino.Abp.DynamicForms.Domain.Shared.csproj", "{D64C1577-4929-4B60-939E-96DE1534891A}"
 EndProject
@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slarkerino.Abp.DynamicForms
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slarkerino.Abp.DynamicForms.Host.Shared", "host\Slarkerino.Abp.DynamicForms.Host.Shared\Slarkerino.Abp.DynamicForms.Host.Shared.csproj", "{F6AC8D4A-EDD7-4514-8E8A-5BCB019864DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slarkerino.Abp.DynamicForms.Blazor.Server.Host", "host\Slarkerino.Abp.DynamicForms.Blazor.Server.Host\Slarkerino.Abp.DynamicForms.Blazor.Server.Host.csproj", "{FEA752A1-5B4E-49E9-B1F3-DDC25E41BB52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slarkerino.Abp.DynamicForms.Blazor.Server.Host", "host\Slarkerino.Abp.DynamicForms.Blazor.Server.Host\Slarkerino.Abp.DynamicForms.Blazor.Server.Host.csproj", "{FEA752A1-5B4E-49E9-B1F3-DDC25E41BB52}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plugins", "plugins", "{664B1781-908A-42E8-B715-6C87452BE54D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

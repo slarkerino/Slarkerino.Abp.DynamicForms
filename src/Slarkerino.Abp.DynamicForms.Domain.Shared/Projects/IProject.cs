@@ -8,7 +8,7 @@ namespace Slarkerino.Abp.DynamicForms.Projects
 
         int ResponseCount { get; }
 
-        string Type { get; }
+        string ProjectType { get; }
 
         ProjectStatus ProjectStatus { get; }
     }

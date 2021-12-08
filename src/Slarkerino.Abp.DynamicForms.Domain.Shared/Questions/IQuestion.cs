@@ -6,7 +6,7 @@ namespace Slarkerino.Abp.DynamicForms.Questions
     {
         string Title { get; }
 
-        string Type { get; }
+        string QuestionType { get; }
 
         int MinScore { get; }
 

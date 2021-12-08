@@ -8,14 +8,14 @@ namespace Slarkerino.Abp.DynamicForms.Questions
 {
     public class Question : FullAuditedEntity<Guid>, IQuestion
     {
-        public string Title { get; protected set; }
+        public virtual string Title { get; protected set; }
 
-        public ExtraPropertyDictionary ExtraProperties { get; protected set; }
+        public virtual ExtraPropertyDictionary ExtraProperties { get; protected set; }
 
-        public string Type { get; protected set; }
+        public virtual string QuestionType { get; protected set; }
 
-        public int MinScore { get; protected set; }
+        public virtual int MinScore { get; protected set; }
 
-        public int MaxScore { get; protected set; }
+        public virtual int MaxScore { get; protected set; }
     }
 }

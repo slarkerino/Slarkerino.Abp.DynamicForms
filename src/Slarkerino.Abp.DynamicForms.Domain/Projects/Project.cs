@@ -12,7 +12,7 @@ namespace Slarkerino.Abp.DynamicForms.Projects
 
         public virtual int ResponseCount { get; protected set; }
 
-        public virtual string Type { get; protected set; }
+        public virtual string ProjectType { get; protected set; }
 
         public virtual ProjectStatus ProjectStatus { get; protected set; }
 

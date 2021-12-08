@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Slarkerino.Abp.DynamicForms.Answers;
+using System;
 using System.Collections.Generic;
-using System.Text;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 
@@ -8,16 +8,20 @@ namespace Slarkerino.Abp.DynamicForms.Responses
 {
     public class Response : FullAuditedAggregateRoot<Guid>, IResponse, IMultiTenant
     {
-        public int Sequence => throw new NotImplementedException();
+        public virtual int Sequence { get; protected set; }
 
-        public DateTime StartTime => throw new NotImplementedException();
+        public virtual DateTime StartTime { get; protected set; }
 
-        public DateTime EndTime => throw new NotImplementedException();
+        public virtual DateTime EndTime { get; protected set; }
 
-        public string IPAddress => throw new NotImplementedException();
+        public virtual string Source { get; protected set; }
 
-        public string Source => throw new NotImplementedException();
+        public virtual Guid? TenantId { get; protected set; }
 
-        public Guid? TenantId => throw new NotImplementedException();
+        public virtual Guid ProjectId { get; protected set; }
+
+        public virtual ICollection<Answer> Answers { get; protected set; }
+
+
     }
 }
