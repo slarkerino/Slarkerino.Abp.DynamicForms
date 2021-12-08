@@ -1,4 +1,4 @@
-﻿namespace Slarkerino.Abp.DynamicForms.Blazor.Server.Host.Menus
+namespace Slarkerino.Abp.DynamicForms.Blazor.Server.Host.Menus
 {
     public class DynamicFormsMenus
     {
@@ -6,5 +6,9 @@
 
         //Add your menu items here...
 
+        public const string Project = Prefix + ".Project";
+        public const string Question = Prefix + ".Question";
+        public const string Response = Prefix + ".Response";
+        public const string Answer = Prefix + ".Answer";
     }
 }

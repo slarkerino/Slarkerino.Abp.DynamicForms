@@ -1,4 +1,4 @@
-﻿using Volo.Abp.Reflection;
+using Volo.Abp.Reflection;
 
 namespace Slarkerino.Abp.DynamicForms.Permissions
 {
@@ -9,6 +9,12 @@ namespace Slarkerino.Abp.DynamicForms.Permissions
         public static string[] GetAll()
         {
             return ReflectionHelper.GetPublicConstantsRecursively(typeof(DynamicFormsPermissions));
+        }
+
+        public class Project
+        {
+            public const string Default = GroupName + ".Project";
+            public const string Manage = Default + ".Manage";
         }
     }
 }

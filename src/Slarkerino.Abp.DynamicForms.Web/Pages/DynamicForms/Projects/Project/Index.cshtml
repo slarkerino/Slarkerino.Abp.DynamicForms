@@ -1,0 +1,48 @@
+@page
+@using Slarkerino.Abp.DynamicForms.Permissions
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Slarkerino.Abp.DynamicForms.Web.Pages.DynamicForms.Projects.Project
+@using Slarkerino.Abp.DynamicForms.Localization
+@using Slarkerino.Abp.DynamicForms.Web.Menus
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<DynamicFormsResource> L
+@inject IAuthorizationService Authorization
+@{
+    PageLayout.Content.Title = L["Project"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:Project"].Value);
+    PageLayout.Content.MenuItemName = DynamicFormsMenus.Project;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/DynamicForms/Projects/Project/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/DynamicForms/Projects/Project/index.css"/>
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["Project"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+			    @if (await Authorization.IsGrantedAsync(DynamicFormsPermissions.Project.Create))
+                {
+                <abp-button id="NewProjectButton"
+                            text="@L["CreateProject"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+                }
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="ProjectTable" class="nowrap"/>
+    </abp-card-body>
+</abp-card>

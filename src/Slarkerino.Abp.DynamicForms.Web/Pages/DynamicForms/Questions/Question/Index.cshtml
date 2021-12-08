@@ -1,0 +1,43 @@
+@page
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Slarkerino.Abp.DynamicForms.Web.Pages.DynamicForms.Questions.Question
+@using Slarkerino.Abp.DynamicForms.Localization
+@using Slarkerino.Abp.DynamicForms.Web.Menus
+@model IndexModel
+@inject IPageLayout PageLayout
+@inject IHtmlLocalizer<DynamicFormsResource> L
+@{
+    PageLayout.Content.Title = L["Question"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:Question"].Value);
+    PageLayout.Content.MenuItemName = DynamicFormsMenus.Question;
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/DynamicForms/Questions/Question/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/DynamicForms/Questions/Question/index.css"/>
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["Question"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+                <abp-button id="NewQuestionButton"
+                            text="@L["CreateQuestion"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="QuestionTable" class="nowrap"/>
+    </abp-card-body>
+</abp-card>

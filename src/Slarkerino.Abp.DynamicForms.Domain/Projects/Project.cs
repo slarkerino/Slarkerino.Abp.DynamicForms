@@ -1,4 +1,4 @@
-﻿using Slarkerino.Abp.DynamicForms.Questions;
+using Slarkerino.Abp.DynamicForms.Questions;
 using System;
 using System.Collections.Generic;
 using Volo.Abp.Domain.Entities.Auditing;
@@ -18,10 +18,40 @@ namespace Slarkerino.Abp.DynamicForms.Projects
 
         public virtual string Tags { get; protected set; }
         
-        public virtual ICollection<Question> Questions { get; protected set; }
+        public virtual List<Question> Questions { get; protected set; }
 
         public virtual Guid? TenantId { get; protected set; }
 
+
+
+        protected Project()
+        {
+            ProjectStatus = ProjectStatus.Pending;
+            Questions = new List<Question>();
+        }
+
+        public Project(
+            Guid id,
+            string title,
+            int responseCount,
+            string projectType,
+            string tags,
+            Guid? tenantId
+        ) : base(id)
+        {
+            Title = title;
+            ResponseCount = responseCount;
+            ProjectType = projectType;
+            ProjectStatus = ProjectStatus.Pending;
+            Tags = tags;
+            Questions = new List<Question>();
+            TenantId = tenantId;
+        }
+
+        public void AddQuestion(Question question)
+        {
+            Questions.Add(question);
+        }
 
     }
 }

@@ -1,4 +1,4 @@
-﻿using Slarkerino.Abp.DynamicForms.Answers;
+using Slarkerino.Abp.DynamicForms.Answers;
 using System;
 using System.Collections.Generic;
 using Volo.Abp.Domain.Entities.Auditing;
@@ -23,5 +23,29 @@ namespace Slarkerino.Abp.DynamicForms.Responses
         public virtual ICollection<Answer> Answers { get; protected set; }
 
 
+
+        protected Response()
+        {
+        }
+
+        public Response(
+            Guid id,
+            int sequence,
+            DateTime startTime,
+            DateTime endTime,
+            string source,
+            Guid? tenantId,
+            Guid projectId,
+            ICollection<Answer> answers
+        ) : base(id)
+        {
+            Sequence = sequence;
+            StartTime = startTime;
+            EndTime = endTime;
+            Source = source;
+            TenantId = tenantId;
+            ProjectId = projectId;
+            Answers = answers;
+        }
     }
 }

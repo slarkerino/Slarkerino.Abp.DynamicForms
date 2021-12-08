@@ -1,6 +1,11 @@
-﻿using System;
+using Slarkerino.Abp.DynamicForms.Answers;
+using Slarkerino.Abp.DynamicForms.Responses;
+using Slarkerino.Abp.DynamicForms.Questions;
+using Slarkerino.Abp.DynamicForms.Projects;
+using System;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace Slarkerino.Abp.DynamicForms.EntityFrameworkCore
 {
@@ -38,6 +43,46 @@ namespace Slarkerino.Abp.DynamicForms.EntityFrameworkCore
                 b.HasIndex(q => q.CreationTime);
             });
             */
+
+
+            builder.Entity<Project>(b =>
+            {
+                b.ToTable(options.TablePrefix + "Projects", options.Schema);
+                b.ConfigureByConvention(); 
+                
+
+                /* Configure more properties here */
+            });
+
+
+            builder.Entity<Question>(b =>
+            {
+                b.ToTable(options.TablePrefix + "Questions", options.Schema);
+                b.ConfigureByConvention(); 
+                
+
+                /* Configure more properties here */
+            });
+
+
+            builder.Entity<Response>(b =>
+            {
+                b.ToTable(options.TablePrefix + "Responses", options.Schema);
+                b.ConfigureByConvention(); 
+                
+
+                /* Configure more properties here */
+            });
+
+
+            builder.Entity<Answer>(b =>
+            {
+                b.ToTable(options.TablePrefix + "Answers", options.Schema);
+                b.ConfigureByConvention(); 
+                
+
+                /* Configure more properties here */
+            });
         }
     }
 }

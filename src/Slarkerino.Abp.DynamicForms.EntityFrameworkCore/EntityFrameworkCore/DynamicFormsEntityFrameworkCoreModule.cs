@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Slarkerino.Abp.DynamicForms.Answers;
+using Slarkerino.Abp.DynamicForms.Responses;
+using Slarkerino.Abp.DynamicForms.Questions;
+using Slarkerino.Abp.DynamicForms.Projects;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 
@@ -17,6 +21,10 @@ namespace Slarkerino.Abp.DynamicForms.EntityFrameworkCore
                 /* Add custom repositories here. Example:
                  * options.AddRepository<Question, EfCoreQuestionRepository>();
                  */
+                options.AddRepository<Project, ProjectRepository>();
+                options.AddRepository<Question, QuestionRepository>();
+                options.AddRepository<Response, ResponseRepository>();
+                options.AddRepository<Answer, AnswerRepository>();
             });
         }
     }

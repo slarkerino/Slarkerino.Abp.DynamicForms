@@ -8,9 +8,9 @@ namespace Slarkerino.Abp.DynamicForms.Options.QuestionTypes
 {
     public class QuestionTypeConfigurationProvider : IQuestionTypeConfigurationProvider, ITransientDependency
     {
-        private readonly DynamicFormsQuestionsOptions _options;
+        private readonly DynamicFormsOptions _options;
 
-        public QuestionTypeConfigurationProvider(IOptions<DynamicFormsQuestionsOptions> options)
+        public QuestionTypeConfigurationProvider(IOptions<DynamicFormsOptions> options)
         {
             _options = options.Value;
         }
